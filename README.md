@@ -1,3 +1,8 @@
+Please use
+test@test.com with Test123 as password for user use
+and
+admin@admin.com with Admin as password for admin use
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
