@@ -72,7 +72,7 @@ function Register() {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="flex flex-col px-5 gap-4 sm:px-10 md:px-20 lg:px-32 xl:px-56 2xl:px-96"
+      className="flex flex-col px-5 gap-4 w-2/4 m-auto lg:w-1/4"
     >
       <h1 className="text-black text-center font-bold text-2xl dark:text-gray-200 mb-6">
         REGISTER

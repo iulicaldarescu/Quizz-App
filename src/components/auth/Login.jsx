@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { IoIosArrowForward } from "react-icons/io";
 import { useFormik } from "formik";
 import supabase from "../../config/supabaseConfig";
 import { useState } from "react";
@@ -19,6 +18,7 @@ function Login() {
     // check in database for a object which has email matching with user typed email
     // if yes return entire object if not returns undefined
     const emailMatch = data.find((user) => user.email === values.email);
+    console.log(emailMatch.password);
 
     if (emailMatch !== undefined) {
       const nameToLocalStorage =
@@ -45,6 +45,7 @@ function Login() {
       }
     } else {
       console.error("EMAIL DOESN'T EXISTS");
+      setWrongCredentials(false);
     }
   };
   const formik = useFormik({
@@ -57,7 +58,7 @@ function Login() {
   });
 
   return (
-    <div className="h-full flex flex-col justify-cente sm:px-10 md:px-20 lg:px-32 xl:px-56 2xl:px-96">
+    <div className="h-full flex flex-col justify-center  w-2/4 m-auto lg:w-1/4">
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col px-5 gap-4 py-10"
@@ -120,7 +121,6 @@ function Login() {
         <div className="flex w-full justify-center items-center gap-2 mt-4">
           <div className="text-black dark:text-gray-300 text-center text-lg hover:underline flex justify-center items-center">
             <Link to="/register">Register</Link>
-            <IoIosArrowForward color="rgb(203 213 225)" size={"17px"} />
           </div>
         </div>
       </form>

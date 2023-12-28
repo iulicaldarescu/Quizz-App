@@ -42,7 +42,7 @@ function LoginAdmin() {
   });
 
   return (
-    <div className="h-full flex flex-col justify-center sm:px-10 md:px-20 lg:px-32 xl:px-56 2xl:px-96">
+    <div className="h-full flex flex-col justify-center w-2/4 m-auto lg:w-1/4">
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col px-5 gap-4 py-10"

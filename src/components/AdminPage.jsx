@@ -207,10 +207,13 @@ function Subjects() {
       </form>
 
       {/* end of form. building the delete function */}
-      <div className="flex flex-col gap-2">
-        {quizArray.map((quizz) => {
+      <div className="flex flex-col gap-2 mt-10">
+        <h2 className="text-2xl font-bold text-rose-600 py-5">
+          Edit/Delete Section
+        </h2>
+        {quizArray.map((quizz, index) => {
           return (
-            <div className="flex justify-between md:px-[25%]">
+            <div className="flex justify-between md:px-[25%]" key={index}>
               <Link to={`/edit/${quizz.id}`}>
                 <p className="border-2 border-black dark:border-white text-black dark:text-white w-36 rounded-xl text-center">
                   {quizz.title}
